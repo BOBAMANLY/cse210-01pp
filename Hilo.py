@@ -1,4 +1,3 @@
-"""Play Game"""
 import random
 import json
 
