@@ -61,12 +61,15 @@ def play_hilo():
         # Display the updated player score
         print(f"PLAYER SCORE: {player_score}")
 
-        # See if the player wants to play again
-        done = input("\nWould you like to play again (y/n)? ").lower()
-        if done == "n":
-            game_done = True
+        
         if player_score <= 0:
             game_done = True
+        else:
+
+            # See if the player wants to play again
+            done = input("\nWould you like to play again (y/n)? ").lower()
+            if done == "n":
+                game_done = True
 
     # Check if the player score was a new high score
     if player_score > high_score_num:
