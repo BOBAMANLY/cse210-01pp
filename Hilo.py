@@ -20,7 +20,7 @@ def play_hilo():
 
     # Create game loop
     game_done = False
-    while game_done != True or player_score > 0:
+    while (game_done != True):
 
         # Deal a random card
         current_card = random.choice(cards)
@@ -63,9 +63,9 @@ def play_hilo():
 
         # See if the player wants to play again
         done = input("\nWould you like to play again (y/n)? ").lower()
-        if done == "y":
-            game_done = False
-        elif done == "n":
+        if done == "n":
+            game_done = True
+        if player_score <= 0:
             game_done = True
 
     # Check if the player score was a new high score
